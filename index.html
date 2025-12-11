@@ -1,61 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <title>Lista de vídeos — Influenciadores Famosos</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-    body{font-family:system-ui,Segoe UI,Roboto,Arial;margin:24px;background:#f7f7fb;color:#111}
-    header{margin-bottom:18px}
-    h1{font-size:28px;margin:0 0 6px}
-    p{margin:0 0 14px;color:#444}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
-    .card{background:#fff;border-radius:10px;padding:12px;box-shadow:0 6px 18px rgba(16,24,40,.06)}
-    .card a{display:block;text-decoration:none;color:#0b66ff;word-break:break-word}
-    .note{font-size:13px;color:#666;margin-top:18px}
-    footer{margin-top:26px;font-size:13px;color:#666}
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Votação: Uber x Ônibus</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Vídeos / Canais — Influenciadores Famosos (60)</h1>
-    <p>Clique em qualquer link para abrir os vídeos do influenciador no YouTube. Substitua links de pesquisa por vídeos específicos se quiser.</p>
-  </header>
+  <main class="wrap">
+    <header>
+      <h1>Votação: Uber vs Ônibus</h1>
+      <p>Escolha seu favorito e confirme seu voto.</p>
+    </header>
 
-  <main class="grid">
-    <!-- 1-4: links diretos conhecidos -->
-    <div class="card"><a href="https://www.youtube.com/channel/UCX6OQ3DkcsbYNE6H8uQQuVA/videos" target="_blank" rel="noopener">MrBeast — vídeos (canal oficial)</a></div>
-    <div class="card"><a href="https://www.youtube.com/user/PewDiePie/videos" target="_blank" rel="noopener">PewDiePie — vídeos (canal oficial)</a></div>
-    <div class="card"><a href="https://www.youtube.com/@CharlidAmelio/videos" target="_blank" rel="noopener">Charli D'Amelio — vídeos (canal oficial)</a></div>
-    <div class="card"><a href="https://www.youtube.com/channel/UCRijo3ddMTht_IHyNSNXpNQ/videos" target="_blank" rel="noopener">Dude Perfect — vídeos (canal oficial)</a></div>
+    <section class="voting">
+      <div class="candidate" id="candidate-uber">
+        <h2>Uber</h2>
+        <button class="vote-btn" data-candidate="uber">Votar em Uber</button>
+        <div class="meta">
+          <span class="count" id="count-uber">0</span> votos
+        </div>
+      </div>
 
-    <!-- 5-60: pesquisas no YouTube (substitua por links diretos se quiser) -->
-    <div class="card"><a href="https://www.youtube.com/results?search_query=Logan+Paul+YouTube" target="_blank" rel="noopener">Logan Paul — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=Jake+Paul+YouTube" target="_blank" rel="noopener">Jake Paul — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=KSI+YouTube" target="_blank" rel="noopener">KSI — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=Emma+Chamberlain+YouTube" target="_blank" rel="noopener">Emma Chamberlain — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=David+Dobrik+YouTube" target="_blank" rel="noopener">David Dobrik — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=Lilly+Singh+YouTube" target="_blank" rel="noopener">Lilly Singh — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=Jeffree+Star+YouTube" target="_blank" rel="noopener">Jeffree Star — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=Markiplier+YouTube" target="_blank" rel="noopener">Markiplier — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=Ninja+YouTube" target="_blank" rel="noopener">Ninja — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=DanTDM+YouTube" target="_blank" rel="noopener">DanTDM — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=Jenna+Marbles+YouTube" target="_blank" rel="noopener">Jenna Marbles — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=Tati+Westbrook+YouTube" target="_blank" rel="noopener">Tati Westbrook — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=Huda+Kattan+YouTube" target="_blank" rel="noopener">Huda Kattan — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=Charli+D+Amelio+YouTube" target="_blank" rel="noopener">Charli D'Amelio — procurar vídeos (pesquisa alternativa)</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=Addison+Rae+YouTube" target="_blank" rel="noopener">Addison Rae — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=Bella+Poarch+YouTube" target="_blank" rel="noopener">Bella Poarch — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=Bretman+Rock+YouTube" target="_blank" rel="noopener">Bretman Rock — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=Liza+Koshy+YouTube" target="_blank" rel="noopener">Liza Koshy — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=Colleen+Ballinger+YouTube" target="_blank" rel="noopener">Colleen Ballinger (Miranda Sings) — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=MKBHD+YouTube" target="_blank" rel="noopener">Marques Brownlee (MKBHD) — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=Unbox+Therapy+YouTube" target="_blank" rel="noopener">Unbox Therapy — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=Rhett+and+Link+Good+Mythical+Morning+YouTube" target="_blank" rel="noopener">Rhett & Link / Good Mythical Morning — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=The+Try+Guys+YouTube" target="_blank" rel="noopener">The Try Guys — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=Philip+DeFranco+YouTube" target="_blank" rel="noopener">Philip DeFranco — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=Kurzgesagt+YouTube" target="_blank" rel="noopener">Kurzgesagt — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=CGP+Grey+YouTube" target="_blank" rel="noopener">CGP Grey — procurar vídeos</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=PewDiePie+YouTube" target="_blank" rel="noopener">PewDiePie — procurar vídeos (pesquisa alternativa)</a></div>
-    <div class="card"><a href="https://www.youtube.com/results?search_query=Shane+Dawson+YouTube" target="_blank" rel="
-                        
+      <div class="candidate" id="candidate-onibus">
+        <h2>Ônibus</h2>
+        <button class="vote-btn" data-candidate="onibus">Votar em Ônibus</button>
+        <div class="meta">
+          <span class="count" id="count-onibus">0</span> votos
+        </div>
+      </div>
+    </section>
+
+    <section class="results" aria-live="polite">
+      <h2>Resultados</h2>
+      <div class="bars">
+        <div class="bar-row">
+          <label>Uber</label>
+          <div class="bar-bg"><div class="bar-fill" id="bar-uber" style="width:0%"></div></div>
+          <span class="percent" id="pct-uber">0%</span>
+        </div>
+
+        <div class="bar-row">
+          <label>Ônibus</label>
+          <div class="bar-bg"><div class="bar-fill" id="bar-onibus" style="width:0%"></div></div>
+          <span class="percent" id="pct-onibus">0%</span>
+        </div>
+      </div>
+
+      <div class="totals">
+        <strong>Total de votos:</strong> <span id="total-votos">0</span>
+      </div>
+    </section>
+
+    <section class="controls">
+      <button id="reset-btn" class="reset">Resetar votação</button>
+      <p class="note">Os votos ficam salvos apenas neste navegador (localStorage).</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
